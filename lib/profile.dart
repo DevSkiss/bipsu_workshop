@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class MyProfile extends StatefulWidget {
@@ -16,15 +18,13 @@ class _MyProfileState extends State<MyProfile> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Image.network(
-                'https://upload.wikimedia.org/wikipedia/commons/c/c4/Mark_Zuckerberg_F8_2018_Keynote_%28cropped%29.jpg',
-                height: 100,
-                width: 100,
+            SizedBox(
+              height: 100,
+              width: 100,
+              child: CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/luffy.png',
+                ),
               ),
             ),
             const SizedBox(height: 30),
